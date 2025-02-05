@@ -76,7 +76,7 @@ body {
   opacity: 0;
   
   /* Animación combinada */
-  animation: fadeInOut 7s ease-in-out forwards, orbit 15s linear infinite;
+  animation: fadeInOut 7s ease-in-out forwards, orbit 17s linear infinite;
   
 }
 .moon::after{
