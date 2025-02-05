@@ -72,7 +72,11 @@ body {
   left: 2%;
   right: 0;
   bottom: 0;
-  animation: fadeInOut 10s infinite ease-in-out;
+  transform-origin: center;
+  opacity: 0;
+  
+  /* Animación combinada */
+  animation: fadeInOut 7s ease-in-out forwards, orbit 15s linear infinite;
   
 }
 .moon::after{
@@ -97,9 +101,23 @@ body {
   100% { opacity: 0.0; }
 }
 @keyframes fadeInOut {
-  0% { opacity: 0; }
-  50% { opacity: .7; }
-  100% { opacity: 0; }
+ 
+  0% {
+    opacity: 0;
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
 }
 
 
@@ -1728,7 +1746,7 @@ h1 {
   .moon{
     width: 120;
     top: 7%;
-    left: 35%;
+    left: 10%;
     height: 120;
   }
 
