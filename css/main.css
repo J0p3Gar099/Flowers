@@ -76,7 +76,7 @@ body {
   opacity: 0;
   
   /* Animación combinada */
-  animation: fadeInOut 7s ease-in-out forwards, orbit 17s linear infinite;
+  animation: fadeInOut 12s ease-in forwards, orbit 17s linear infinite, glow 8s ease-in infinite;;
   
 }
 .moon::after{
@@ -118,6 +118,23 @@ body {
 @keyframes orbit {
   0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
   100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 
+      5px 0 10px 3px rgba(229, 229, 229, 0.4),
+      0 0 10px 2px rgba(229, 229, 229, 0.3),
+      5px 0 10px 2px rgba(229, 229, 229, 0.4),
+      0 0 3px 2px rgba(229, 229, 229, 0.3);
+  }
+  50% {
+    box-shadow: 
+      5px 0 20px 6px rgba(229, 229, 229, 0.9),
+      0 0 20px 6px rgba(229, 229, 229, 0.8),
+      5px 0 20px 6px rgba(229, 229, 229, 0.9),
+      0 0 6px 3px rgba(229, 229, 229, 1);
+  }
 }
 
 
